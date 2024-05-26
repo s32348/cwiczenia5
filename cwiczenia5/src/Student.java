@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Student {
     String name;
@@ -20,12 +21,18 @@ public class Student {
     this.dateOfBirth=dateOfBirth;
     setIndexNumber(indexNumber);
     }
-    public String getIndexNumber() {
+    private String getIndexNumber() {
+
         return indexNumber;
     }
 
-    public void setIndexNumber(String indexNumber) {
+    private void setIndexNumber(String indexNumber) {
         count++;
         this.indexNumber = "S"+count;
+    }
+    private static ArrayList<Student> studentsList = new ArrayList<>();
+
+    public void addStudent(Student student) {
+        studentsList.add(student);
     }
 }
